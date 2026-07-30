@@ -1,0 +1,246 @@
+[
+  {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "content-type": "application/json",
+      "user-agent": "axios/1.16.1",
+      "content-length": "3829",
+      "accept-encoding": "gzip, compress, deflate, br",
+      "traceparent": "00-d88dd9d0a98695fc4424136d1d873026-2929a6b57bc5d559-01",
+      "host": "172.17.0.1:5678",
+      "connection": "keep-alive"
+    },
+    "params": {},
+    "query": {},
+    "body": {
+      "rule_name": "Test-Phishing-Webhook",
+      "context": {
+        "title": "rule 'Test-Phishing-Webhook' matched query",
+        "date": "2026-07-21T13:51:36.692Z",
+        "value": 3,
+        "hits": [
+          {
+            "_index": "phishing-test-000001",
+            "_id": "Yr1Ma58BDnyHcQd3vSxW",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-16T14:22:00.000Z",
+              "email": {
+                "from": {
+                  "address": "hacker@bad-domain.com"
+                },
+                "to": {
+                  "address": "user@yourcompany.com"
+                },
+                "subject": "URGENT: Password Reset",
+                "attachments": [
+                  {
+                    "file": {
+                      "hash": {
+                        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      }
+                    }
+                  }
+                ]
+              },
+              "url": {
+                "original": "http://malicious-link.com/login"
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-16T14:22:00.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-16T14:22:00.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000001",
+            "_id": "6r1Aa58BDnyHcQd3HCtL",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-16T14:10:00.000Z",
+              "email": {
+                "from": {
+                  "address": "hacker@bad-domain.com"
+                },
+                "to": {
+                  "address": "user@yourcompany.com"
+                },
+                "subject": "URGENT: Password Reset",
+                "attachments": [
+                  {
+                    "file": {
+                      "hash": {
+                        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      }
+                    }
+                  }
+                ]
+              },
+              "url": {
+                "original": "http://malicious-link.com/login"
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-16T14:10:00.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-16T14:10:00.000Z"
+            ]
+          },
+          {
+            "_index": "phishing-test-000001",
+            "_id": "b70za58BDnyHcQd3sSvJ",
+            "_score": null,
+            "_source": {
+              "@timestamp": "2026-07-16T09:00:00.000Z",
+              "event": {
+                "category": "email",
+                "action": "message-delivered",
+                "kind": "event"
+              },
+              "email": {
+                "from": {
+                  "address": "it-support@micros0ft-secure.com"
+                },
+                "to": {
+                  "address": "student@kmitl.ac.th"
+                },
+                "subject": "Urgent: Your account will be suspended",
+                "message_id": "<CA+9x8fQ2mZ@evil.com>"
+              },
+              "url": {
+                "full": "http://micros0ft-secure.com/verify?id=8842",
+                "domain": "micros0ft-secure.com"
+              },
+              "source": {
+                "ip": "45.155.205.233"
+              },
+              "host": {
+                "name": "mail-gw-01"
+              },
+              "user": {
+                "name": "student"
+              }
+            },
+            "fields": {
+              "@timestamp": [
+                "2026-07-16T09:00:00.000Z"
+              ]
+            },
+            "sort": [
+              "2026-07-16T09:00:00.000Z"
+            ]
+          }
+        ],
+        "link": "/app/r?l=DISCOVER_APP_LOCATOR&v=9.4.3&lz=N4IgJghgLhBqCWBTA7gZQA6IMYgFynjDxADYBmAJkQBYAjLCAWlooFYBOR6gDloEZGERCRKDEEdrWzUsfCjgA0IKPCgAbRMXQALeAGddAOwDmjKIj1RGABlu2%2BAKhBKVAW0QAxJGrAA5CO7EAAJuFjCu6M4gegD2AK4ATlie8GrmCXp4ANoAukoAZt5gHjEJrtCZ%2BAC%2BSglxhqFeiD4AshCR1UoQamoxyL4xAJKGYIgAHnj53XqISoYBmrggAAq6BvAmjJAwZmFR3b3IABKEo4aT07Mg5fPGiES4U2ozNSCFaYgZ2XkgAI5xnwAnnhQP8gcQomoICY4hA7sQANYAhLA16hABK0Ph%2BDeCRirmIFGsFFE1lEFD4ABU%2BGRcKw%2BLgyCQAHQkdgUABaUSgMUJxNJAHZGBTqbT6YyWWzOSBXvoAIIaBJQdEWOJpSpQOqIKpAA%3D",
+        "sourceFields": {
+          "email.from.address": [
+            "hacker@bad-domain.com",
+            "it-support@micros0ft-secure.com"
+          ],
+          "email.message_id": [
+            "<CA+9x8fQ2mZ@evil.com>"
+          ],
+          "email.subject": [
+            "URGENT: Password Reset",
+            "Urgent: Your account will be suspended"
+          ],
+          "email.to.address": [
+            "user@yourcompany.com",
+            "student@kmitl.ac.th"
+          ],
+          "event.category": [
+            "email"
+          ],
+          "host.name": [
+            "mail-gw-01"
+          ],
+          "source.ip": [
+            "45.155.205.233"
+          ],
+          "url.domain": [
+            "micros0ft-secure.com"
+          ],
+          "url.full": [
+            "http://micros0ft-secure.com/verify?id=8842"
+          ],
+          "url.original": [
+            "http://malicious-link.com/login"
+          ],
+          "user.name": [
+            "student"
+          ],
+          "email": {
+            "from": {
+              "address": [
+                "hacker@bad-domain.com",
+                "it-support@micros0ft-secure.com"
+              ]
+            },
+            "message_id": [
+              "<CA+9x8fQ2mZ@evil.com>"
+            ],
+            "subject": [
+              "URGENT: Password Reset",
+              "Urgent: Your account will be suspended"
+            ],
+            "to": {
+              "address": [
+                "user@yourcompany.com",
+                "student@kmitl.ac.th"
+              ]
+            }
+          },
+          "event": {
+            "category": [
+              "email"
+            ]
+          },
+          "host": {
+            "name": [
+              "mail-gw-01"
+            ]
+          },
+          "source": {
+            "ip": [
+              "45.155.205.233"
+            ]
+          },
+          "url": {
+            "domain": [
+              "micros0ft-secure.com"
+            ],
+            "full": [
+              "http://micros0ft-secure.com/verify?id=8842"
+            ],
+            "original": [
+              "http://malicious-link.com/login"
+            ]
+          },
+          "user": {
+            "name": [
+              "student"
+            ]
+          }
+        },
+        "conditions": "Number of matching documents is greater than 0",
+        "message": "Document count is 3 in the last 30d in Phishing-data-test data view. Alert when greater than 0."
+      },
+      "state": {
+        "latestTimestamp": "2026-07-16T14:22:00.000Z",
+        "dateStart": "2026-06-21T13:51:36.692Z",
+        "dateEnd": "2026-07-21T13:51:36.692Z",
+        "start": "2026-07-19T08:06:00.862Z",
+        "duration": "193535785000000"
+      }
+    },
+    "webhookUrl": "http://localhost:5678/webhook-test/54c43b3a-697f-4152-9259-606984d87d96",
+    "executionMode": "test"
+  }
+]

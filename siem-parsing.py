@@ -1,7 +1,7 @@
 """Parsing data from Elastic SIEM to made it easier to craft IoC (Indicator of Compomise)"""
 
 import json, re
-from pathlib import Path
+from pathlib import Path # file path
 
 from flatten_json import flatten as flatten_json
 
@@ -14,6 +14,7 @@ FILTER = re.compile(
     r"|context\.message|conditions|threat\."
     r"|\.(_id|_index|_score|sort)$"
 )
+
 
 def load(path):
     """read a JSON file -> Python objects"""

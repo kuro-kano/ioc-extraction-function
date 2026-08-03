@@ -10,7 +10,7 @@ def main():
     iocs = extract(flat_data)
 
     for ioc in iocs:
-        print(f"{ioc['type']:<12} {ioc['value']}")
+        print(f"{ioc['type']:<12} {ioc['value']} {ioc['path']}\n")
 
     print(f"\nvariables : {len(flat_data)}")
     print(f"IoCs      : {len(iocs)}")

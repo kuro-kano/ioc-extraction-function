@@ -11,30 +11,19 @@ FILTER = re.compile(
 )
 
 IOC_FIELDS = {
-    "source.ip": "ip",
-    "destination.ip": "ip",
-    "host.ip": "ip",
-    "client.ip": "ip",
-    "server.ip": "ip",
-    "url.full": "url",
-    "url.original": "url",
-    "url.domain": "domain",
-    "dns.question.name": "domain",
     "email.from.address": "email",
     "email.to.address": "email",
     "email.cc.address": "email",
     "email.subject": "subject",
     "email.message_id": "message_id",
+    "source.ip": "ip",
+    "url.full": "url",
+    "url.original": "url",
+    "url.domain": "domain",
+    "file.name": "filename",
     "hash.md5": "md5",
     "hash.sha1": "sha1",
     "hash.sha256": "sha256",
-    "file.name": "filename",
-    "file.path": "filepath",
-    "process.executable": "filepath",
-    "parent.executable": "filepath",
-    "process.command_line": "command",
-    "registry.path": "registry",
-    "vulnerability.id": "cve",
 }
 
 
@@ -52,6 +41,14 @@ def find_type(path):
     return None
 
 
+def clean(value, ioc_type):
+    """Normalize value on same ioc type"""
+    value = str(value).strip()
+    if ioc_type != "subject":
+        value = value.strip('"')
+    return value
+
+
 def extract(flat_data):
     """flat variables -> list of indicators    """
     iocs = []
@@ -61,5 +58,5 @@ def extract(flat_data):
         ioc_type = find_type(path)
         if not ioc_type:
             continue
-        iocs.append({"type": ioc_type, "value": value, "path": path})
+        iocs.append({"type": ioc_type, "value": clean(value, ioc_type), "path": path})
     return iocs

@@ -58,14 +58,29 @@ def is_public_ip(value):
         return False
 
 
+def is_valid(value, ioc_type):
+    """reject placeholders, ip"""
+    if value in ("null", "none"):
+        return False
+    if ioc_type == "ip":
+        return is_public_ip(value)
+    return True
+
+
 def extract(flat_data):
     """flat variables -> list of indicators    """
     iocs = []
     for path, value in flat_data.items():
         if filter(path):
             continue
+
         ioc_type = find_type(path)
         if not ioc_type:
             continue
+
+        value = clean(value, ioc_type)
+        if not is_valid(value, ioc_type):
+            continue
+
         iocs.append({"type": ioc_type, "value": clean(value, ioc_type), "path": path})
     return iocs

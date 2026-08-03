@@ -38,7 +38,7 @@ IOC_FIELDS = {
 }
 
 
-def is_skipped(path):
+def filter(path):
     """return true if `path` is envelope noise rather than alert data"""
     return bool(FILTER.search(clean_path(path)))
 
@@ -56,7 +56,7 @@ def extract(flat_data):
     """flat variables -> list of indicators    """
     iocs = []
     for path, value in flat_data.items():
-        if is_skipped(path):
+        if filter(path):
             continue
         ioc_type = find_type(path)
         if not ioc_type:

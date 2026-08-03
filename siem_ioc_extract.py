@@ -69,7 +69,7 @@ def is_valid(value, ioc_type):
 
 def extract(flat_data):
     """flat variables -> list of indicators    """
-    iocs = []
+    iocs = {}
     for path, value in flat_data.items():
         if filter(path):
             continue
@@ -81,6 +81,8 @@ def extract(flat_data):
         value = clean(value, ioc_type)
         if not is_valid(value, ioc_type):
             continue
+        
+        ioc = iocs.setdefault((ioc_type, value), {"type": ioc_type, "value": value, "sources": []})
+        ioc["sources"].append(path)
 
-        iocs.append({"type": ioc_type, "value": clean(value, ioc_type), "path": path})
-    return iocs
+    return list(iocs.values())

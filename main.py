@@ -14,7 +14,7 @@ def main():
         # ok_ip = is_public_ip(ioc["value"]) if ioc["type"] == "ip" else ""
         # print(f"{ioc['type']:<12} {ioc['value']} {ok_ip}")
 
-        print(f"{ioc['type']:<12} {ioc['value']} {ioc['path']}\n")
+        print(f"{ioc['type']:<12} {ioc['value']}  (x{len(ioc['sources'])})")
 
     print(f"\nvariables : {len(flat_data)}")
     print(f"IoCs      : {len(iocs)}")

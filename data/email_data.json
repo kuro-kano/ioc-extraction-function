@@ -1,0 +1,59 @@
+{
+  "id": "19fc6d091c423680",
+  "threadId": "19fc6d091c423680",
+  "labelIds": [
+    "UNREAD",
+    "CATEGORY_PERSONAL",
+    "INBOX"
+  ],
+  "sizeEstimate": 1055473,
+  "headers": {
+    "delivered-to": "Delivered-To: trisit93@gmail.com",
+    "received": "Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])\r\n        by mx.google.com with SMTPS id 2adb3069b0e04-5b2e2443734sor726672e87.20.2026.08.03.01.49.45\r\n        for <trisit93@gmail.com>\r\n        (Google Transport Security);\r\n        Mon, 03 Aug 2026 01:49:45 -0700 (PDT)",
+    "x-received": "X-Received: by 2002:a05:6512:b10:b0:5aa:8822:c945 with SMTP id\r\n 2adb3069b0e04-5b2e4f86771mr1584919e87.47.1785746984440; Mon, 03 Aug 2026\r\n 01:49:44 -0700 (PDT)",
+    "arc-seal": "ARC-Seal: i=1; a=rsa-sha256; t=1785746985; cv=none;\r\n        d=google.com; s=arc-20260327;\r\n        b=XnH7zQ2VZE15qaOJmyQm2UTNXp5Cc6s9Jm4QkYVodOeIaUh/lhTK0KmJE2y49lZWa1\r\n         mtqMk67jQr75t3HI+womn4cNTEdmxRTRhjdoH0gihgLCKy8sJlGs2sTxhCQxWFBn1rMj\r\n         /+6ZfiZ13bTFwLvgWR4Uq1tB22Hv+XYTaGLe+yZVvb2sJjUnM0n+OfbHlNCf9o0yH47b\r\n         kQGiv2fQMyp2qVn25n+NvXousaodVgbou/YYlX0ZdjZTwLMUTQYpht/cdxBsFGXb7RkM\r\n         FkqK1mCF6t59perCY7wb8vfBc31RPy/CaO7KAVCaD9bfqizuffMMjmTmbtQIa10PISwi\r\n         zWFw==",
+    "arc-message-signature": "ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;\r\n        h=to:subject:message-id:date:from:mime-version:dkim-signature;\r\n        bh=tXDdumGreZcZbxHEzBUC1XhUNdM55e09SN6VmHOBeiU=;\r\n        fh=QfUuwyRgbti+f3h9j74Ddo9e4bh45GzqlcRiyWNftow=;\r\n        b=UQqH1YGuJM7ZwH0GkPThBsIvThKKeSTPlX3i6alT9bxtCJgQS3J6Vjn23Ms+/5Q6ip\r\n         LMXWqAKe3gPPTZPa0pf/5RF8d4AhtHPk76zsT4s4n+yvyQxo6+OInUuz5UdT8hqDtNo8\r\n         Rx5zsQt5WFvWKFf3HidKbbgh6ggutI6RTMcSLC31zRrsAKDSDZkFOmplTe1gb9y3eUtv\r\n         f49Yw74VEi03evjYVwXNN+paC4kcQz8aDi2N+/fR4ogMidFuUucl6rqsKcR43P4wdkSZ\r\n         ssbGuQrBdxJRvHqJGVOeDMTKM7fi2WMpTnjHG3S3DNm2WuJrWA1bP3qjBA53t8iWopW7\r\n         G3ag==;\r\n        dara=google.com",
+    "arc-authentication-results": "ARC-Authentication-Results: i=1; mx.google.com; arc=none",
+    "return-path": "Return-Path: <66070091@kmitl.ac.th>",
+    "received-spf": "Received-SPF: pass (google.com: domain of 66070091@kmitl.ac.th designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;",
+    "authentication-results": "Authentication-Results: mx.google.com;\r\n       dkim=pass header.i=@kmitl.ac.th header.s=google header.b=EUFELl3V;\r\n       arc=pass (i=1);\r\n       spf=pass (google.com: domain of 66070091@kmitl.ac.th designates 209.85.220.41 as permitted sender) smtp.mailfrom=66070091@kmitl.ac.th;\r\n       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=kmitl.ac.th;\r\n       dara=pass header.i=@gmail.com",
+    "dkim-signature": "DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=kmitl.ac.th; s=google; t=1785746985; x=1786351785; dara=google.com;\r\n        h=content-type:to:subject:message-id:date:from:mime-version:from:to\r\n         :cc:subject:date:message-id:reply-to:content-type;\r\n        bh=tXDdumGreZcZbxHEzBUC1XhUNdM55e09SN6VmHOBeiU=;\r\n        b=EUFELl3V2jRscArGY4/3wfHuEUSGXzfZDuqHq7lkE7NiS/Eq72jvCvZcr8YCuPvrR9\r\n         ysDgz7uBt04JOaEvkb17BgxgsAeXjZp87IBnhezK5OYa/Zux6TCrIQGo9zQSRgU0CDhJ\r\n         4UCXA/3Qbn79T92QZeqU3UR2mci5kfXGKZE9E=",
+    "x-google-dkim-signature": "X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n        d=1e100.net; s=20251104; t=1785746985; x=1786351785;\r\n        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg\r\n         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to\r\n         :content-type;\r\n        bh=tXDdumGreZcZbxHEzBUC1XhUNdM55e09SN6VmHOBeiU=;\r\n        b=pUHvUREI0IIDXb6xmD0SAwySRQ33dW/wZZ+Yg2zx8ga+alSKu9LlhN0vXQHvSmLqmh\r\n         uEGDb9nCgUl6K0YttCADg2AdvgAyHU0b/+3gcEfxhObZF4yEggHOhkON0j5g9MX660kY\r\n         kzHJXQz53+A33JqDD4eXBu1KBgInfyAlwNzo919pG4w95qfSMsUphhT2BZ+NoIKLYWW+\r\n         BAQWzlh1x1nlx4FtPbdPkKT1Kxqszj9B6m2asU3LqudUZiL2q/ijePcI4c4UafcVGimA\r\n         4PMtHgYA7xyIDK6Ugd5Zn6eWfGfceSG9rOhZ9faa+Q/p4WwkJiN1eVr+b81fLY5aT6h7\r\n         KgYg==",
+    "x-gm-message-state": "X-Gm-Message-State: AOJu0YzrehjOT0OhaIT/NeNGI1oecYwybHFCXjTINDnBVGfYrVG8otc+\r\n\thCsrhNcip95bLEEBke7aGb62S9aExAkdXQsJOYcr5prSTTsarMnV+teU98pZB+6lAcx1Jwn3bR4\r\n\teIEEdfCc+lr230IfEC+8iv2F8cNJJsQiXQGs8Ck9DGFJc2BVONCLZoLqVBQ==",
+    "x-gm-gg": "X-Gm-Gg: AR+sD12ROVS/ETuYX2JrKh/VFSVrnpXE3520mOCQ0INVmOnq9EP9NqGkJ77z1DWZCyD\r\n\tiHuChwQyoNlwm5be2hYujhtqzyb09ttK5PHFIL7PyMH2koeKuFBPhCPcIwh1LbeVRH+nrT5iGb0\r\n\tYlN3IFLwmDutkp7xIJVldWHyvRCg0mTnJaaGVo20aRm9HJ3epjyqg05wg6y35KQZoefW75oEnDr\r\n\tUUT7cZEF6NcJq3VxkqkTMXXvc0FQWfBr9Pk9u/98z4JdQFR2sDSHTuKEQvQwlWXhb+51EVzP3lk\r\n\tDzu3oBn/A242hC+rrRrBpvaeLOsogtbO3S7qRXpVEfzA9w==",
+    "mime-version": "MIME-Version: 1.0",
+    "from": "From: Thanya Woramongkol <66070091@kmitl.ac.th>",
+    "date": "Date: Mon, 3 Aug 2026 15:49:32 +0700",
+    "x-gm-features": "X-Gm-Features: AUfX_my1Q6wNVEvcoTWEnNAv8UYYFNp_SdSzxjH51PPkhaICUE84UMLmU4sjV7s",
+    "message-id": "Message-ID: <CAF5LqFA0RuOaWJBKcJydJw1Ud7yNt8zR3DQJQj8x8V4yD6uL-w@mail.gmail.com>",
+    "subject": "Subject: testing send gmail with kmitl account",
+    "to": "To: \"trisit93@gmail.com\" <trisit93@gmail.com>",
+    "content-type": "Content-Type: multipart/mixed; boundary=\"000000000000aac25b0658209e6b\""
+  },
+  "html": "<div dir=\"ltr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><a href=\"https://github.com/kuro-kano/ioc-extraction-function\">kuro-kano/ioc-extraction-function: ioc extraction function for Senior project ITKMITL - SOAR Project</a><br><br><br></div>\n",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\nveniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\ncommodo consequat. Duis aute irure dolor in reprehenderit in voluptate\nvelit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\ncupidatat non proident, sunt in culpa qui officia deserunt mollit anim id\nest laborum.\n\nkuro-kano/ioc-extraction-function: ioc extraction function for Senior\nproject ITKMITL - SOAR Project\n<https://github.com/kuro-kano/ioc-extraction-function>\n",
+  "textAsHtml": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br/>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br/>veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br/>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate<br/>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat<br/>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id<br/>est laborum.</p><p>kuro-kano/ioc-extraction-function: ioc extraction function for Senior<br/>project ITKMITL - SOAR Project<br/>&lt;<a href=\"https://github.com/kuro-kano/ioc-extraction-function\">https://github.com/kuro-kano/ioc-extraction-function</a>&gt;</p>",
+  "subject": "testing send gmail with kmitl account",
+  "date": "2026-08-03T08:49:32.000Z",
+  "to": {
+    "value": [
+      {
+        "address": "trisit93@gmail.com",
+        "name": ""
+      }
+    ],
+    "html": "<span class=\"mp_address_group\"><a href=\"mailto:trisit93@gmail.com\" class=\"mp_address_email\">trisit93@gmail.com</a></span>",
+    "text": "trisit93@gmail.com"
+  },
+  "from": {
+    "value": [
+      {
+        "address": "66070091@kmitl.ac.th",
+        "name": "Thanya Woramongkol"
+      }
+    ],
+    "html": "<span class=\"mp_address_group\"><span class=\"mp_address_name\">Thanya Woramongkol</span> &lt;<a href=\"mailto:66070091@kmitl.ac.th\" class=\"mp_address_email\">66070091@kmitl.ac.th</a>&gt;</span>",
+    "text": "\"Thanya Woramongkol\" <66070091@kmitl.ac.th>"
+  },
+  "messageId": "<CAF5LqFA0RuOaWJBKcJydJw1Ud7yNt8zR3DQJQj8x8V4yD6uL-w@mail.gmail.com>"
+}

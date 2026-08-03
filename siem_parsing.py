@@ -1,6 +1,7 @@
-"""Parsing data from Elastic SIEM to made it easier to craft IoC (Indicator of Compomise)"""
+"""Parsing data from Elastic SIEM to made it easier to craft IoC"""
 
-import json, re
+import json
+import re
 from pathlib import Path # file path
 
 from flatten_json import flatten as flatten_json
@@ -8,23 +9,11 @@ from flatten_json import flatten as flatten_json
 # ./data/example_data.txt
 DATA_FILE = Path(__file__).parent / "data" / "example_data.txt"
 
-FILTER = re.compile(
-    r"headers\.|params\.|query\.|state\.|webhookUrl"
-    r"|executionMode|context\.link|context\.title"
-    r"|context\.message|conditions|threat\."
-    r"|\.(_id|_index|_score|sort)$"
-)
-
 
 def load(path):
     """read a JSON file -> Python objects"""
     with open(path, encoding="utf-8") as file:
         return json.load(file)
-
-
-def filter(data):
-    """return true if `data` is unused data"""
-    return bool(FILTER.search(data))
 
 
 def clean_path(path):
@@ -40,14 +29,11 @@ def flatten(data):
     return flatten_json(data, separator=".")
 
 
-def main(data):
-    """main function... yea main function"""
-    flat_data = flatten(data)
-    for path, value in flat_data.items():
-        field = clean_path(path)
-        if filter(field):
-            continue
-        print(f"{field} = {value}")
+def parse(path=DATA_FILE):
+    """a SIEM alert file -> {"body.context.hits.0._source.source.ip": "1.2.3.4"}"""
+    return flatten(load(path))
 
 
-main(load(DATA_FILE))
+# Only runs when this file is executed directly, never on import.
+if __name__ == "__main__":
+    print(json.dumps(parse(), indent=2, ensure_ascii=False))

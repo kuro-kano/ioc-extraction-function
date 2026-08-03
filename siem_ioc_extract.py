@@ -1,6 +1,7 @@
 """Craft IoC (Indicator of Compromise) from variables of siem_parsing.py"""
 
 import re
+import ipaddress
 from siem_parsing import clean_path
 
 FILTER = re.compile(
@@ -47,6 +48,14 @@ def clean(value, ioc_type):
     if ioc_type != "subject":
         value = value.strip('"')
     return value
+
+
+def is_public_ip(value):
+    """check value that was public ip or private ip"""
+    try:
+        return ipaddress.ip_address(value).is_global
+    except ValueError:
+        return False
 
 
 def extract(flat_data):

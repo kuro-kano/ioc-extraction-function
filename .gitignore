@@ -1,1 +1,9 @@
 venv/
+__pycache__/
+.claude/
+
+.gitignore
+*test.py
+
+CLAUDE.md
+STEPS.md
